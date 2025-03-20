@@ -1,11 +1,12 @@
 import React from "react";
-import heroImage01 from "../assets/images/hero-img01.png";
-import heroImage02 from "../assets/images/hero-img02.png";
-import heroImage03 from "../assets/images/hero-img03.png";
+import heroImage01 from "../assets/images/heroImg01.jpeg";
+import heroImage02 from "../assets/images/heroImg02.jpeg";
+// import heroImage03 from "../assets/images/heroImg03.jpeg";
+import heroImage04 from "../assets/images/heroImg04.jpeg";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
-import featureimg from "../assets/images/feature-img.png";
+import featureimg from "../assets/images/heroImg05.jpeg";
 import faqImg from "../assets/images/faq-img.png";
 import videoIcon from "../assets/images/video-icon.png";
 import avatarIcon from "../assets/images/avatar-icon.png";
@@ -35,14 +36,10 @@ const Home = () => {
             <div>
               <div className="lg:w-[570px]">
                 <h1 className="text-[36px] leading-[46px] text-headingColor font-[800] md:text-[45px] md:leading-[70px]">
-                  A Smart Solution for Better Healthcare: Helping patients live
-                  healthier, longer lives.
+                A Smarter Way to Health Empowering patients to live healthier, longer lives.
                 </h1>
                 <p className="text__para">
-                  We have developed a healthcare platform that supports the
-                  diagnosis, treatment, and management of seven major diseases,
-                  aiming to improve patient quality of life with accurate
-                  information, customized treatment plans, and ongoing support.
+                We’ve built a healthcare platform designed to help diagnose, treat, and manage seven major diseases. Our goal is to improve patients' quality of life with accurate insights, personalized treatment plans, and continuous support.
                 </p>
                 <button onClick={bookAppointment} className="btn">
                   Request an Appointment
@@ -79,11 +76,11 @@ const Home = () => {
 
             <div className="flex gap-[30px] justify-end">
               <div>
-                <img src={heroImage01} className="w-full" alt="" />
+                <img src={heroImage01} className="w-full rounded-md  " alt="" />
               </div>
               <div className="mt-[30px]">
-                <img src={heroImage02} className="w-full mb-[30px]" alt="" />
-                <img src={heroImage03} className="w-full" alt="" />
+                <img src={heroImage02} className="w-full rounded-md   mb-[30px]" alt="" />
+                <img src={heroImage04} className="w-full rounded-md  " alt="" />
               </div>
             </div>
           </div>
@@ -98,8 +95,7 @@ const Home = () => {
               Providing the medical services
             </h2>
             <p className="text__para text-center">
-              World-class care for everyone. Our health System offers unmatched
-              expert health care.
+            Exceptional Care for All: Expert healthcare you can trust.
             </p>
           </div>
 
@@ -220,7 +216,7 @@ const Home = () => {
 
             {/* ========== Feature Image ========== */}
             <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
-              <img src={featureimg} className="w-3/4" alt="" />
+              <img src={heroImage04} className="w-3/4" alt="" />
 
               <div className="w-[150px] lg:w-[248px] bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:px-4 lg:pb-[26px] roundeed-[10px]">
                 <div className="flex items-center justify-between">
@@ -273,7 +269,7 @@ const Home = () => {
         <div className="container">
           <div className="flex justify-between gap-[50px] lg:gap-0">
             <div className="w-1/2 hidden md:block">
-              <img src={faqImg} alt="" />
+              <img src={featureimg} alt="" className="w-[600px]" />
             </div>
 
             <div className="w-full md:w-1/2">

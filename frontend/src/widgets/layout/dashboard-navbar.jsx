@@ -37,7 +37,7 @@ export function DashboardNavbar() {
       color={fixedNavbar ? "white" : "transparent"}
       className={`rounded-xl transition-all ${
         fixedNavbar
-          ? "sticky top-4 z-40 py-3 shadow-md shadow-blue-gray-500/5"
+          ? "sticky top-4 z-40 py-3 shadow-md shadow-green-gray-500/5"
           : "px-0 py-1"
       }`}
       fullWidth
@@ -54,7 +54,7 @@ export function DashboardNavbar() {
               <Typography
                 variant="small"
                 color="blue-gray"
-                className="font-normal opacity-50 transition-all hover:text-blue-500 hover:opacity-100"
+                className="font-normal opacity-50 transition-all hover:text-green-500 hover:opacity-100"
               >
                 {layout}
               </Typography>
@@ -156,7 +156,7 @@ export function DashboardNavbar() {
                 </div>
               </MenuItem>
               <MenuItem className="flex items-center gap-4">
-                <div className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-tr from-blue-gray-800 to-blue-gray-900">
+                <div className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-tr from-green-gray-800 to-green-gray-900">
                   <CreditCardIcon className="h-4 w-4 text-white" />
                 </div>
                 <div>

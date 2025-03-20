@@ -76,7 +76,7 @@ const AdminDoctors = () => {
               className="border-2 border-gray-500 rounded-lg px-4 py-2 m-4 relative hover:shadow-xl"
             >
               <div className="mb-3 flex justify-between">
-                <BiEditAlt className="text-blue-500 cursor-pointer" />
+                <BiEditAlt className="text-green-500 cursor-pointer" />
                 <Link to={`/delete/doctor/${user._id}`}>
                   <MdDelete className="cursor-pointer text-red-500" />
                 </Link>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import signupImg from "../assets/images/signup.gif";
+import signUp from '../assets/signUp.svg'
 import uploadImageToCloudinary from "../utils/uploadCloudinary";
 import { BASE_URL } from "../config.js";
 import { toast } from "react-toastify";
@@ -69,7 +70,7 @@ const Signup = () => {
           {/* ========== img box ========== */}
           <div className="hidden lg:block bg-primaryColor rounded-l-lg">
             <figure className="rounded-l-lg">
-              <img src={signupImg} alt="" className="w-full rounded-l-lg" />
+              <img src={signUp} alt="" className="w-full rounded-l-lg" />
             </figure>
           </div>
 

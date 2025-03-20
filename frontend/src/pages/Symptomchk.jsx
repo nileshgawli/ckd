@@ -49,7 +49,7 @@ const Symptomchk = () => {
       const response = await axios.post(`${BASE_URL}/symptoms`, {
         data: symptoms,
       });
-      console.log(response);
+      console.log("resposnse:",response);
       setDescription(response.data.data.dis_des);
       setPrecaution(response.data.data.my_precautions);
       setMedications(response.data.data.medications);

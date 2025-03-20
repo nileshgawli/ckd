@@ -15,16 +15,16 @@ body {
   background: #fff !important;
 }
 .swiper-pagination-bullet-active {
-  background: #0067ff !important;
+  background: #008F39 !important;
   border: none !important;
 }
 .swiper {
   padding-bottom: 70px !important;
 }
 .swiper-slide.swiper-slide-next {
-  background: #0067ff;
+  background: #008F39;
   border-radius: 12px;
-  box-shadow: 0px 20px 70px rgba(0, 103, 155, 0.3) !important;
+  box-shadow: 0px 20px 70px rgba(0, 155, 50, 0.3) !important;
 }
 .swiper-slide.swiper-slide-next h4,
 .swiper-slide.swiper-slide-next p {
@@ -42,7 +42,7 @@ body {
   left: 0;
   z-index: 99999;
   background: white;
-  box-shadow: 3px 3px -8px 3px #ddd;
+  box-shadow: 3px 3px -8px 3px rgba(1, 155, 50, 0.2);
 }
 
 @media only screen and (max-width: 768px) {

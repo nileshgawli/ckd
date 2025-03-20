@@ -42,8 +42,7 @@ const Contact = () => {
       <div className="px-4 mx-auto max-w-screen-md">
         <h2 className="heading text-center">Contact Us</h2>
         <p className="mb-8 lg:mb-18 font-light text-center text__para">
-          Got a technical issue? want to send feedback about a beta feature? Let
-          us know.
+        Got a Technical Issue? Have Feedback on a Beta Feature?
         </p>
         <form onSubmit={handleSubmit} className="space-y-8">
           <div>

@@ -23,23 +23,24 @@ const corsOptions = {
   origin: true,
 };
 
-app.get("/", (req, res) => {
-  res.send("Api is working");
-});
-
 //database connection
 mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
+    console.log("MongoDB URL:", process.env.MONGO_URL); // Debugging line
     await mongoose.connect(process.env.MONGO_URL, {
-      //   useNewUrlParser: true,
-      //   useUnifiedTopology: true,
+        // useNewUrlParser: true,
+        // useUnifiedTopology: true,
     });
     console.log("Mongoose connected");
   } catch (error) {
     console.log("Mongoose connection failed");
   }
 };
+
+app.get("/", (req, res) => {
+  res.send("Api is working");
+});
 
 //middleware
 app.use(express.json());

@@ -16,9 +16,9 @@ export const services = [
   {
     id: "1",
     name: "Kidney Disease Test",
-    desc: "Chronic kidney disease, or CKD, is the progressive decline in kidney function. Kidneys filter blood, removing waste and excess fluid for excretion in the urine. In advanced stages, CKD leads to a dangerous accumulation of fluids, electrolytes, and waste in the body, posing serious health risks.",
-    bgColor: "rgba(1, 181, 197, .2)",
-    textColor: "#01B5C5",
+    desc: "Chronic Kidney Disease (CKD) is a condition where kidney function gradually declines over time. The kidneys help filter waste and excess fluids from the blood, but as CKD progresses, harmful toxins build up in the body, leading to serious health complications.",
+    bgColor: "rgba(1, 155, 50, .2)",  
+    textColor: "#019B32",
   },
   // {
   //   id: "4",
