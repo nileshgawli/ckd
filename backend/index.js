@@ -27,7 +27,7 @@ const corsOptions = {
 mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
-    console.log("MongoDB URL:", process.env.MONGO_URL); // Debugging line
+    // console.log("MongoDB URL:", process.env.MONGO_URL); // Debugging line
     await mongoose.connect(process.env.MONGO_URL, {
         // useNewUrlParser: true,
         // useUnifiedTopology: true,
