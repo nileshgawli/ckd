@@ -1,7 +1,7 @@
 import "../../App.css";
 import React, { useEffect, useRef, useContext } from "react";
 // import logo from "../../assets/images/Logo1.png";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { authContext } from "../../context/AuthContext.jsx";
@@ -30,6 +30,7 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const navigate = useNavigate()
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const { user, role, token } = useContext(authContext);
@@ -61,7 +62,7 @@ const Header = () => {
           {/* ===========Logo ==========*/}
           <div>
             {/* <img className="w-28 h-20 object-fill" src={logo} alt="Logo" /> */}
-            <h1 className="font-extrabold italic text-2xl">MedAssist</h1>
+            <h1 onClick={() => navigate("/")} className="font-extrabold italic text-2xl cursor-pointer">MedAssist</h1>
           </div>
           {/* =========== Menu ==========*/}
           <div className="navigation" ref={menuRef}>
@@ -92,11 +93,10 @@ const Header = () => {
             {token && user ? (
               <div>
                 <Link
-                  to={`${
-                    role === "doctor"
-                      ? "/doctors/profile/me"
-                      : "/users/profile/me"
-                  }`}
+                  to={`${role === "doctor"
+                    ? "/doctors/profile/me"
+                    : "/users/profile/me"
+                    }`}
                 >
                   <figure className="w-[35px] h-[35px] rounded-full cursor-pointer">
                     <img
