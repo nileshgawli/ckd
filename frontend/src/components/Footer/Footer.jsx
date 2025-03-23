@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/Logo1.png";
+// import logo from "../../assets/images/";
 import {
   AiFillYoutube,
   AiFillGithub,
