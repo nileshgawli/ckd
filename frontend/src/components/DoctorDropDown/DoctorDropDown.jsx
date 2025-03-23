@@ -4,6 +4,7 @@ import { BASE_URL } from "../../config";
 import Loader from "../../components/Loader/Loading";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Error from "../Error/Error.jsx";
 
 function DoctorsDropDown({ testName, testResult = null }) {
   const loginUser = JSON.parse(localStorage.getItem("user"));

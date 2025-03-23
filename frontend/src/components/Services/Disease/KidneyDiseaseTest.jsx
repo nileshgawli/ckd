@@ -208,51 +208,51 @@ const KidneyDiseaseTest = () => {
         <h1 className="text-center text-3xl font-bold mb-8">
           Kidney Disease Predictor
         </h1>
-        <div className="card border border-black rounded-lg p-8">
+        <div className="card border border-[#E4E4E4] rounded-lg p-8">
           <div className="flex justify-between mb-4">
             <button
-              className="bg-green-500 text-white px-4 py-2 rounded-full m-2"
+              className="bg-green-500 text-white px-4 py-2 rounded-[5px] m-2"
               onClick={() => setInputData(healthyData1)}
             >
               Healthy Data 1
             </button>
 
             <button
-              className="bg-green-500 text-white px-4 py-2 rounded-full m-2"
+              className="bg-green-500 text-white px-4 py-2 rounded-[5px] m-2"
               onClick={() => setInputData(healthyData2)}
             >
               Healthy Data 2
             </button>
 
             <button
-              className="bg-green-500 text-white px-4 py-2 rounded-full m-2"
+              className="bg-green-500 text-white px-4 py-2 rounded-[5px] m-2"
               onClick={() => setInputData(healthyData3)}
             >
               Healthy Data 3
             </button>
             <button
-              className="bg-red-500 text-white px-4 py-2 rounded-full m-2"
+              className="bg-red-500 text-white px-4 py-2 rounded-[5px] m-2"
               onClick={() => setInputData(unhealthyData1)}
             >
               Unhealthy Data 1
             </button>
 
             <button
-              className="bg-red-500 text-white px-4 py-2 rounded-full m-2"
+              className="bg-red-500 text-white px-4 py-2 rounded-[5px] m-2"
               onClick={() => setInputData(unhealthyData2)}
             >
               Unhealthy Data 2
             </button>
 
             <button
-              className="bg-red-500 text-white px-4 py-2 rounded-full m-2"
+              className="bg-red-500 text-white px-4 py-2 rounded-[5px] m-2"
               onClick={() => setInputData(unhealthyData3)}
             >
               Unhealthy Data 3
             </button>
 
             <button
-              className="bg-slate-500 text-white px-4 py-2 rounded-full m-2"
+              className="bg-slate-500 text-white px-4 py-2 rounded-[5px] m-2"
               onClick={() => setInputData(clearData)}
             >
               Clear
@@ -263,7 +263,7 @@ const KidneyDiseaseTest = () => {
               {Object.entries(inputData).map(([name, value]) => (
                 <div key={name} className="col-span-1">
                   <input
-                    className="border border-black p-2 w-full"
+                    className="border border-[#E4E4E4] p-2 w-full"
                     type="text"
                     name={name}
                     placeholder={`${name}`}
@@ -276,18 +276,25 @@ const KidneyDiseaseTest = () => {
                 <div className="text-red-500 mb-4">{formError}</div>
               )}
             </div>
-            <input
-              type="submit"
-              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full w-full mt-3"
-              value="Predict"
-            />
+
+            <div className="flex justify-center w-full">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full place-items-center">
+                <div className=""></div>
+                <input
+                  type="submit"
+                  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-[5px] mt-3 w-full"
+                  value="Predict"
+                />
+                <div className=""></div>
+              </div>
+            </div>
+
           </form>
           {loading && <div className="text-center mt-3">🔄 Loading...</div>}
           {prediction !== null && !loading && (
             <div
-              className={`mt-3 ${
-                prediction.includes("[1]") ? "bg-red-400" : "bg-green-400"
-              } text-2xl`}
+              className={`mt-3 ${prediction.includes("[1]") ? "bg-red-400" : "bg-green-400"
+                } text-2xl`}
             >
               <h3 className="text-center">
                 {prediction.includes("[1]")
