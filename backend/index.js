@@ -22,19 +22,22 @@ const port = process.env.PORT || 8000;
 const corsOptions = {
   origin: true,
 };
-
-//database connection
 mongoose.set("strictQuery", false);
+
 const connectDB = async () => {
   try {
-    // console.log("MongoDB URL:", process.env.MONGO_URL); // Debugging line
+    console.log("🔍 MongoDB Connection Attempt...");
+    console.log("🌍 MongoDB URL:", process.env.MONGO_URL); // Debugging line
+
     await mongoose.connect(process.env.MONGO_URL, {
-        // useNewUrlParser: true,
-        // useUnifiedTopology: true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     });
-    console.log("Mongoose connected");
+
+    console.log("✅ Mongoose connected successfully!");
   } catch (error) {
-    console.log("Mongoose connection failed");
+    console.error("❌ Mongoose connection failed:", error.message);
+    process.exit(1); // Exit the process if DB connection fails
   }
 };
 
