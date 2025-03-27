@@ -9,124 +9,125 @@ const KidneyDiseaseTest = () => {
     BP: "80",
     AL: "1.02",
     SU: "0",
-    RBC: "normal",
-    PC: "normal",
-    PCC: "notpresent",
-    BA: "notpresent",
+    RBC: "0",
+    PC: "0",
+    PCC: "0",
+    BA: "0",
     BGR: "117",
     BU: "46",
     SC: "1.2",
     POT: "137",
     WC: "5",
-    HTN: "no",
-    DM: "no",
-    CAD: "no",
-    PE: "good",
-    ANE: "no",
-  };
+    HTN: "0",
+    DM: "0",
+    CAD: "0",
+    PE: "1",
+    ANE: "0"
+};
 
-  const healthyData2 = {
+const healthyData2 = {
     Age: "42",
     BP: "80",
     AL: "1.02",
     SU: "0",
-    RBC: "normal",
-    PC: "normal",
-    PCC: "notpresent",
-    BA: "notpresent",
+    RBC: "0",
+    PC: "0",
+    PCC: "0",
+    BA: "0",
     BGR: "132",
     BU: "24",
     SC: "0.7",
     POT: "140",
     WC: "4.1",
-    HTN: "no",
-    DM: "no",
-    CAD: "no",
-    PE: "good",
-    ANE: "no",
-  };
+    HTN: "0",
+    DM: "0",
+    CAD: "0",
+    PE: "1",
+    ANE: "0"
+};
 
-  const healthyData3 = {
+const healthyData3 = {
     Age: "50",
     BP: "80",
     AL: "1.02",
     SU: "0",
-    RBC: "normal",
-    PC: "normal",
-    PCC: "notpresent",
-    BA: "notpresent",
+    RBC: "0",
+    PC: "0",
+    PCC: "0",
+    BA: "0",
     BGR: "97",
     BU: "40",
     SC: "0.6",
     POT: "150",
     WC: "4.5",
-    HTN: "no",
-    DM: "no",
-    CAD: "no",
-    PE: "good",
-    ANE: "no",
-  };
+    HTN: "0",
+    DM: "0",
+    CAD: "0",
+    PE: "1",
+    ANE: "0"
+};
 
-  const unhealthyData1 = {
+const unhealthyData1 = {
     Age: "65",
     BP: "70",
     AL: "1.01",
     SU: "2",
-    RBC: "normal",
-    PC: "present",
-    PCC: "notpresent",
+    RBC: "0",
+    PC: "1",
+    PCC: "0",
     BGR: "112",
     BU: "73",
     SC: "3.3",
     HB: "10.9",
-    HTN: "no",
-    DM: "no",
-    CAD: "no",
-    PE: "good",
-    ANE: "no",
-  };
+    HTN: "0",
+    DM: "0",
+    CAD: "0",
+    PE: "1",
+    ANE: "0"
+};
 
-  const unhealthyData2 = {
+const unhealthyData2 = {
     Age: "26",
     BP: "70",
     AL: "1.015",
     SU: "0",
-    RBC: "normal",
-    PC: "notpresent",
-    PCC: "notpresent",
+    RBC: "0",
+    PC: "0",
+    PCC: "0",
     BGR: "250",
     BU: "20",
     SC: "1.1",
     HB: "15.6",
     WC: "6900",
     RC: "6",
-    HTN: "no",
-    DM: "yes",
-    CAD: "no",
-    PE: "good",
-    ANE: "no",
-  };
+    HTN: "0",
+    DM: "1",
+    CAD: "0",
+    PE: "1",
+    ANE: "0"
+};
 
-  const unhealthyData3 = {
+const unhealthyData3 = {
     Age: "61",
     BP: "80",
     AL: "1.015",
     SU: "0",
-    RBC: "normal",
-    PC: "notpresent",
-    PCC: "notpresent",
+    RBC: "0",
+    PC: "0",
+    PCC: "0",
     BGR: "360",
     BU: "19",
     SC: "0.7",
     POT: "137",
     WC: "4.4",
     HB: "15.2",
-    HTN: "yes",
-    DM: "yes",
-    CAD: "no",
-    PE: "good",
-    ANE: "no",
-  };
+    HTN: "1",
+    DM: "1",
+    CAD: "0",
+    PE: "1",
+    ANE: "0"
+};
+
 
   const clearData = {
     Age: "",
