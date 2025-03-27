@@ -69,22 +69,22 @@ const Symptomchk = () => {
         <h2 className="heading text-center">Health Care Center</h2>
       </div>
       <div
-        className="container my-4 w-[70%] mt-4"
+        className="container my-4 w-[70%] mt-4 "
         style={{
-          background: "#18263b2b",
+          background: "#E6F7EC",
           color: "black",
           borderRadius: "15px",
           padding: "20px",
         }}
       >
         <form onSubmit={handlePrediction}>
-          <div className="form-group">
+          <div className="form-group flex flex-col justify-center items-center gap-5 ">
             <label htmlFor="symptoms" className="font-bold text-3xl mr-2" style={{ color: "black" }}>
               Select Symptoms:
             </label>
             <input
               type="text"
-              className="p-3 rounded-2xl w-[60%] text-2xl font-semibold form-control"
+              className="p-3 rounded-2xl w-[60%] text-2xl font-semibold form-control outline-none"
               id="symptoms"
               name="symptoms"
               placeholder="type systems such as itching, sleeping, aching etc"

@@ -33,60 +33,26 @@ const Home = () => {
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-[90px] items-center justify-between">
             {/* ========== Hero Content ========== */}
-            <div>
-              <div className="lg:w-[570px]">
-                <h1 className="text-[36px] leading-[46px] text-headingColor font-[800] md:text-[45px] md:leading-[70px]">
-                A Smarter Way to Health Empowering patients to live healthier, longer lives.
+            <div className="w-full items-center justify-center flex" >
+              <div className="lg:w-[800px]">
+                <h1 className="text-[36px] pb-10 leading-[46px] text-headingColor font-[800] md:text-[45px] md:leading-[70px] text-center w-full">
+                  A Smarter Way to Health Empowering patients to live healthier, longer lives.
                 </h1>
                 <p className="text__para">
-                We’ve built a healthcare platform designed to help diagnose, treat, and manage seven major diseases. Our goal is to improve patients' quality of life with accurate insights, personalized treatment plans, and continuous support.
+                  We’ve built a healthcare platform designed to help diagnose, treat, and manage seven major diseases. Our goal is to improve patients' quality of life with accurate insights, personalized treatment plans, and continuous support.
                 </p>
-                <button onClick={bookAppointment} className="btn">
-                  Request an Appointment
-                </button>
-              </div>
-              {/* ========== Hero Counter */}
-              <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]">
-                <div>
-                  <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
-                    30+
-                  </h2>
-                  <span className="w-[100px] h-2 bg-yellowColor rounded-full block mt-[-14px]"></span>
-                  <p className="text__para">Years of Experience</p>
-                </div>
-
-                <div>
-                  <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
-                    15+
-                  </h2>
-                  <span className="w-[100px] h-2 bg-purpleColor rounded-full block mt-[-14px]"></span>
-                  <p className="text__para">Clinic Location</p>
-                </div>
-
-                <div>
-                  <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
-                    100%
-                  </h2>
-                  <span className="w-[100px] h-2 bg-irisBlueColor rounded-full block mt-[-14px]"></span>
-                  <p className="text__para">Patient Satisfaction</p>
+                <div className="flex justify-center">
+                  <button onClick={bookAppointment} className="btn">
+                    Request an Appointment
+                  </button>
                 </div>
               </div>
+
             </div>
             {/* ========== Hero Content ========== */}
-
-            <div className="flex gap-[30px] justify-end">
-              <div>
-                <img src={heroImage01} className="w-full rounded-md  " alt="" />
-              </div>
-              <div className="mt-[30px]">
-                <img src={heroImage02} className="w-full rounded-md   mb-[30px]" alt="" />
-                <img src={heroImage04} className="w-full rounded-md  " alt="" />
-              </div>
-            </div>
           </div>
         </div>
       </section>
-      {/* ========== Hero Section End ========== */}
 
       {/* ========== About Section ========== */}
       <About />
