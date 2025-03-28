@@ -21,6 +21,8 @@ const Profile = ({ doctorData }) => {
     photo: "" || null,
   });
 
+  
+
   useEffect(() => {
     setFormData({
       name: doctorData?.name,

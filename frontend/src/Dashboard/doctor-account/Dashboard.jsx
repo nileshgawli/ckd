@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Loader from "../../components/Loader/Loading";
 import Error from "../../components/Error/Error";
 import useGetProfile from "../../hooks/useFetchData.jsx";
@@ -10,12 +10,16 @@ import Profile from "./Profile.jsx";
 import Appointments from "./Appointments.jsx";
 
 const Dashboard = () => {
-  const { data, loading, error } =  useGetProfile(
+  const { data, loading, error } = useGetProfile(
     `${BASE_URL}/doctors/profile/me`
   );
   console.log("data is::: ", data);
   const [tab, setTab] = useState("overview");
 
+  useEffect(() => {
+    console.log("cloudinary name", import.meta.env.VITE_CLOUD_NAME);
+    console.log("cloudinary upload preset", import.meta.env.VITE_UPLOAD_PRESET);
+  }, [])
   return (
     <section>
       <div className="max-w-[1170px] px-5 mx-auto">
