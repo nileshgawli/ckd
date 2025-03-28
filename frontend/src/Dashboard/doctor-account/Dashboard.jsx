@@ -10,10 +10,10 @@ import Profile from "./Profile.jsx";
 import Appointments from "./Appointments.jsx";
 
 const Dashboard = () => {
-  const { data, loading, error } = useGetProfile(
+  const { data, loading, error } =  useGetProfile(
     `${BASE_URL}/doctors/profile/me`
   );
-  console.log("data: ", data);
+  console.log("data is::: ", data);
   const [tab, setTab] = useState("overview");
 
   return (

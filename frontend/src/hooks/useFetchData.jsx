@@ -7,17 +7,21 @@ const useFetchData = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (!url) return;
+
     const fetchData = async () => {
       setLoading(true);
+      setError(null); // Reset error state before fetching
       try {
         const res = await fetch(url, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        const result = await res.json();
-
         if (!res.ok) {
           throw new Error(result.message + "🤢");
         }
+        const result = await res.json();
+        console.log("::::::::", result)
+
         setData(result.data);
         setLoading(false);
       } catch (err) {
@@ -26,6 +30,7 @@ const useFetchData = (url) => {
       }
     };
     fetchData();
+
   }, [url]);
   return { data, loading, error };
 };

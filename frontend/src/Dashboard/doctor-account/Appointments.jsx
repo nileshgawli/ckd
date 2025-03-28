@@ -3,6 +3,13 @@ import { formateDate } from "../../utils/formatDate.js";
 
 const Appointments = ({ appointments }) => {
   console.log("appointments: ", appointments);
+  const formatDateTime = (dateString) => {
+    if (!dateString) return "N/A";
+    const date = new Date(dateString);
+    const formattedDate = date.toISOString().split("T")[0]; // 'YYYY-MM-DD'
+    const formattedTime = date.toTimeString().split(" ")[0].slice(0, 5); // 'HH:mm'
+    return `${formattedDate} ${formattedTime}`;
+  };
   return (
     <div className="overflow-x-auto">
       <table className="w-full min-w-max bg-white border-gray-300 border rounded-md">
@@ -26,18 +33,19 @@ const Appointments = ({ appointments }) => {
                 <div className="flex items-center">
                   <div className="mr-2">
                     <div className="text-sm font-semibold">
-                      {item.user.name}
+                      {item.patientName}
                     </div>
                   </div>
                 </div>
               </td>
-              <td className="py-3 px-6 text-left">{item.user.gender}</td>
-              <td className="py-3 px-6 text-left">{item.status}</td>
-              <td className="py-3 px-6 text-left">{item.ticketPrice}</td>
-              <td className="py-3 px-6 text-left">
+              <td className="py-3 px-6 text-left">{item.patientGender}</td>
+              <td className="py-3 px-6 text-left">{item.payment}</td>
+              <td className="py-3 px-6 text-left">{item.price}</td>
+              <td className="py-3 px-6 text-left">{formatDateTime(item.bookedOn)}</td>
+              {/* <td className="py-3 px-6 text-left">
                 {formateDate(item.updatedAt)}
-              </td>
-              <td className="py-3 px-6 text-left">{item.testName ||'Pneumonia'}</td>
+              </td> */}
+              <td className="py-3 px-6 text-left">{item.testName || 'Pneumonia'}</td>
             </tr>
           ))}
         </tbody>

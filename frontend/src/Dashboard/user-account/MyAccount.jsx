@@ -33,7 +33,7 @@ const MyAccount = () => {
         {!loading && !error && (
           <div className="grid md:grid-cols-3 gap-10">
             <div className="pb-[50px] px-[30px] rounded-md">
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center ">
                 <figure className="w-[100px] h-[100px] rounded-full border-2 border-solid border-primaryColor">
                   <img
                     src={userData.photo}

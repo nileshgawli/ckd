@@ -99,34 +99,63 @@ export const getAllDoctors = async (req, res) => {
   }
 };
 
+// export const getDoctorProfile = async (req, res) => {
+//   const doctorId = req.doctorId;
+//   // console.log("Doctor ID:", doctorId);
+
+//   try {
+//     const doctor = await Doctor.findById(doctorId);
+//     // console.log("Retrieved doctor profile:", doctor);
+
+//     if (!doctor) {
+//       return res
+//         .status(404)
+//         .json({ success: false, message: "Doctor not found" });
+//     }
+
+//     const { password, ...rest } = doctor._doc;
+//     const appointments = await Booking.find({ doctor: doctorId });
+
+//     res.status(200).json({
+//       success: true,
+//       message: "Profile info is getting",
+//       data: { ...rest, appointments },
+//     });
+//   } catch (error) {
+//     // console.error("Error fetching doctor profile:", error);
+//     res.status(500).json({
+//       success: false,
+//       message: "Someting went wrong, cannot get this",
+//       error: error.message,
+//     });
+//   }
+// };
+
+// new
+
 export const getDoctorProfile = async (req, res) => {
   const doctorId = req.doctorId;
-  // console.log("Doctor ID:", doctorId);
 
   try {
-    const doctor = await Doctor.findById(doctorId);
-    // console.log("Retrieved doctor profile:", doctor);
+    const doctor = await Doctor.findById(doctorId).populate("appointments"); // Populate appointments
 
     if (!doctor) {
-      return res
-        .status(404)
-        .json({ success: false, message: "Doctor not found" });
+      return res.status(404).json({ success: false, message: "Doctor not found" });
     }
 
     const { password, ...rest } = doctor._doc;
-    const appointments = await Booking.find({ doctor: doctorId });
 
     res.status(200).json({
       success: true,
-      message: "Profile info is getting",
-      data: { ...rest, appointments },
+      message: "Profile info retrieved",
+      data: rest,
     });
   } catch (error) {
-    // console.error("Error fetching doctor profile:", error);
     res.status(500).json({
       success: false,
-      message: "Someting went wrong, cannot get this",
+      message: "Something went wrong, cannot retrieve profile",
       error: error.message,
     });
   }
 };
+
