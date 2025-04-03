@@ -22,12 +22,12 @@ const AdminLayout = () => {
     <>
       <nav className="flex justify-between rounded-full m-5 bg-gray-200 items-center py-4 px-6">
         <ul className="flex justify-around gap-44">
-          <li>
+          {/* <li>
             <NavLink to="/home" className="flex items-center">
               <FaHome className="mr-1" />
               Home
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="/admin/users" className="flex items-center">
               <FaUser className="mr-1" />

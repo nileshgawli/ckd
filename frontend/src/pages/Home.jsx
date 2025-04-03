@@ -38,7 +38,7 @@ const Home = () => {
                 <h1 className="text-[36px] pb-10 leading-[46px] text-headingColor font-[800] md:text-[45px] md:leading-[70px] text-center w-full">
                   A Smarter Way to Health Empowering patients to live healthier, longer lives.
                 </h1>
-                <p className="text__para">
+                <p className="text__para text-center">
                   We’ve built a healthcare platform designed to help diagnose, treat, and manage seven major diseases. Our goal is to improve patients' quality of life with accurate insights, personalized treatment plans, and continuous support.
                 </p>
                 <div className="flex justify-center">

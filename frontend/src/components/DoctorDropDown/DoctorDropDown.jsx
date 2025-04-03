@@ -70,7 +70,7 @@ function DoctorsDropDown({ testName, testResult = null }) {
                 </option>
               ))}
             </select>
-            {selectedDoctor && <p>Selected Doctor ID : {selectedDoctor}</p>}
+            {/* {selectedDoctor && <p>Selected Doctor ID : {selectedDoctor}</p>} */}
           </div>
         </div>
         <div className="button-container">
