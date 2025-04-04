@@ -67,24 +67,6 @@ const healthyData3 = {
     ANE: "0"
 };
 
-const unhealthyData1 = {
-    Age: "65",
-    BP: "70",
-    AL: "1.01",
-    SU: "2",
-    RBC: "0",
-    PC: "1",
-    PCC: "0",
-    BGR: "112",
-    BU: "73",
-    SC: "3.3",
-    HB: "10.9",
-    HTN: "0",
-    DM: "0",
-    CAD: "0",
-    PE: "1",
-    ANE: "0"
-};
 
 const unhealthyData2 = {
     Age: "26",
@@ -230,12 +212,6 @@ const unhealthyData3 = {
               onClick={() => setInputData(healthyData3)}
             >
               Healthy Data 3
-            </button>
-            <button
-              className="bg-red-500 text-white px-4 py-2 rounded-[5px] m-2"
-              onClick={() => setInputData(unhealthyData1)}
-            >
-              Unhealthy Data 1
             </button>
 
             <button

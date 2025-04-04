@@ -17,7 +17,8 @@ description = pd.read_csv(r"E:\BACHELORS MINI PROJECTS\Final\AI-MedLab\backend\H
 medications = pd.read_csv(r"E:\BACHELORS MINI PROJECTS\Final\AI-MedLab\backend\HealthPredict\medications.csv")
 diets = pd.read_csv(r"E:\BACHELORS MINI PROJECTS\Final\AI-MedLab\backend\HealthPredict\diets.csv")
 
-with open(r"E:\BACHELORS MINI PROJECTS\Final\AI-MedLab\backend\ai-models\svc.pkl", 'rb') as model_fileL:
+with open(r"E:\BACHELORS MINI PROJECTS\Final\AI-MedLab\backend\aimodels\svc.pkl", 'rb') as model_fileL:
+
 #with open("./aimodels/svc.pkl", 'rb') as model_fileL:
     model = pickle.load(model_fileL)
 
