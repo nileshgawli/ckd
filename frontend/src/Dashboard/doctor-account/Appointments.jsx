@@ -45,7 +45,7 @@ const Appointments = ({ appointments }) => {
               {/* <td className="py-3 px-6 text-left">
                 {formateDate(item.updatedAt)}
               </td> */}
-              <td className="py-3 px-6 text-left">{item.testName || 'Pneumonia'}</td>
+              <td className="py-3 px-6 text-left">{item.testName || 'Kidney'}</td>
             </tr>
           ))}
         </tbody>
